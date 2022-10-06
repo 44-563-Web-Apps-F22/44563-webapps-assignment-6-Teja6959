@@ -22,10 +22,31 @@
 
 
 <p id="result">This text will be replaced </p>
-
+<div>
+    <img src ="killerant.jpg" width="100" height="100" onclick ="swapImage()" id ="image">
+    </div>
 <script> 
    Correct=0;
    Wrong =0;
+
+   useImage =1
+    function swapImage()
+    {
+        switch(useImage)
+        {
+        case 1:  
+                useImage=useImage+1      
+                 document.getElementById('image').src ="Alderflies.jpg"   
+                  break;
+        case 2:useImage=useImage+1
+                 document.getElementById('image').src="killerant.jpg"                
+                  break;
+        case 3:useImage=useImage+1
+                 document.getElementById('image').src="Lice.jpg"                
+                  break;
+    }
+}
+
 
 function checkguess(){
     console.log("Getting form values")
