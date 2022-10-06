@@ -12,7 +12,7 @@
 
 <form>
     <label for="form1_age">Enter the secret music artist name </label>
-    <input type ="password" id="form1_musicartist" name="form1_Musicartist" value="john lennon" min=10 max=50 step=2 value=30> <br>
+    <input type ="password" id="form1_musicartist" name="form1_musicartist" value="john lennon" min=10 max=50 step=2 value=30> <br>
 
     <label for="guessmusicain">Guess the musician </label>
     <input type ="text" id="form1_gmusician" name="form1_gmusician" autofocus> <br>
@@ -26,8 +26,8 @@
     <img src ="killerant.jpg" width="100" height="100" onclick ="swapImage()" id ="image">
     </div>
 <script> 
-   Correct=0;
-   Wrong =0;
+   correct=0;
+   wrong =0;
 
    useImage =1
     function swapImage()
@@ -61,6 +61,8 @@ function checkguess(){
     }
     else{
         wrong =wrong+1
+        if(wrong==3)
+        alert("Sorry, game over")
         alert("wrong musician")
         out.innerHTML="wrong value is"+wrong
     }
